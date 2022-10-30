@@ -90,3 +90,70 @@ console.log(whosAllowedToDrink);
 const justNames = whosAllowedToDrink.map((p) => p.name);
 
 console.log(justNames);
+
+
+
+const animals = ["leopard", "giraffe", "zebra", "elephant", "monkey", "lion"]
+
+//map()
+
+// const newAnimals = animals.map(function(animalElemenet){
+//     return animalElemenet + " is cool";
+//     } );
+
+const newAnimalsArrow = animals.map( (animalElemenet) =>{
+    return animalElemenet + " is cool";
+} );
+
+const moreAnimals = animals.map( (animal, idx) => {
+    return `${idx+1} - ${animal} is very cool`;
+} )
+
+console.log(newAnimalsArrow)
+console.log(moreAnimals)
+
+// -- filter
+const filteredAnimals = animals.filter( (eachOneElement, index) => {
+    if(eachOneElement.length <= 5){
+        return true;
+    } else{
+        return false;
+    }
+} )
+
+const filteredAnimals2 = animals.filter( (a) => {
+    return a.length <= 5;
+} )
+
+
+
+console.log(filteredAnimals);
+console.log(filteredAnimals2);
+
+// ------------
+const people = [
+    {name: "bob", age:30},
+    {name: "mary", age:31},
+    {name: "sue", age:28},
+    {name: "george", age:38}
+];
+
+// filter people with age >= 30
+
+const peopleOver30 = people.filter( (p) => {
+    if (p.age >= 30) {
+        return true;
+    } else{
+        return false;
+    }
+} );
+
+const people30 = people.filter( (p) => {
+    return p.age >= 30;
+}).map( (elem) => {
+    elem.age++;
+    return `${elem.name} is ${elem.age} old`;
+})
+
+console.log(peopleOver30)
+console.log(people30)

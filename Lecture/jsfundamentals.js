@@ -104,6 +104,17 @@ smallHello("lance");
 sayHello("john");
 arrowHello("bob");
 
+const sayHi = (someOne) => {
+  if(someOne === undefined){
+    someOne = "anonymous"
+  }
+  return "hi " + someOne
+}
+
+
+console.log(sayHi("bob"));
+console.log(sayHi());
+
 
 // --ternirary operator -- 
 const g = 1;
@@ -114,3 +125,5 @@ if(g > 1 ){
 }
 
 g > 1 ? console.log("yes") : console.log("no");
+
+
