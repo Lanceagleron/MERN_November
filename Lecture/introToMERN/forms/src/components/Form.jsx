@@ -23,7 +23,7 @@ const Form = (props) => {
         //setting state
         // setPeople([...people, name])
         props.addToPeopleState(newPerson)
-        setName("")props
+        setName("")
         setColor("")
     }
 
