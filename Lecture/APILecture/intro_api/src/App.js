@@ -9,10 +9,10 @@ function App() {
 
   //useEffect ============================================
 
-  useEffect(() => {
-    
-    axiosSuperHeroes();
-  }, [])
+  // useEffect(() => {
+
+  //   axiosSuperHeroes();
+  // }, [])
 
   // Vanilla JS fetch
   const fetchSuperHeroes = () => {
