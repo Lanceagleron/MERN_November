@@ -11,7 +11,6 @@ const Form = (props) => {
         e.preventDefault();
         console.log(Id)
         navigate(go + Id)
-
     }
 
 
