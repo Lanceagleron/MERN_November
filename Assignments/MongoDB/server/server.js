@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const PORT = 8000;
-const DB = "cartoons"
+const DB = "jokes"
 
 // ---Middleware---
 app.use( express.json() );
@@ -14,7 +14,7 @@ require("./config/mongoose.config")(DB)
 // --- import the ROUTES HERE ---
 // const routesFile = require("./routes/routes")
 // routesFile(app)
-require("./routes/cartoons.routes")(app)
+require("./routes/jokes.routes")(app)
 
 
 app.listen(PORT, () => console.log("server up on PORT:", PORT))
