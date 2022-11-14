@@ -13,7 +13,7 @@ app.use( express.urlencoded({ extended: true }) );
 require("./config/mongoose.config")(DB)
 
 // --- import the ROUTES HERE ---
-require("./routes/cartoons.routes")(app)
+require("./routes/notes.route")(app)
 
 // START THE SERVER
 app.listen(PORT, () => console.log("server up on PORT:", PORT))

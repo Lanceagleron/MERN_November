@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import './App.css';
-import axios from 'axios'
+import axios from 'axios';
+import {Link, Route, Routes, Navigate} from 'react-router-dom';
+import Product from './components/Product';
 
 function App() {
   const [allProducts, setAllProducts] = useState([])
@@ -45,18 +47,21 @@ function App() {
         <button>Submit</button>
       </form>
       <hr />
+      <h1>All our Products</h1>
       {
         allProducts.map((eachProduct, i) => {
           return (
             <div key={i}>
-              <p >Title: {eachProduct.title}</p>
-              <p>Price: ${eachProduct.price}</p>
-              <p>Description: {eachProduct.description}</p>
-              <hr />
+              <Link to={`/product/${eachProduct._id}`}>{eachProduct.title}</Link>
             </div>
           )
         })
       }
+      <hr />
+      <Routes>
+        <Route path='/'></Route>
+        <Route path='/product/:id' element={<Product/>}></Route>
+      </Routes>
     </div>
   );
 }
